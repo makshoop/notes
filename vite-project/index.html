@@ -2,12 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <title>Notes</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+
+    <div class="table" id="table">
+      <h1>Hello, my dear friend!</h1>
+      <p>Use this service for searching in notes</p>
+      <p>Good luck ;)</p>
+    </div>
+
+    <div class="search-engine" id="search-engine">
+      <form action="search">enter a request
+        <input type="text">
+      </form>
+    </div>
+
+    <div class="note" id="note">
+      <h3>title</h3>
+      <p>description</p>
+    </div>
+
+
+
+    <script type="module" src="/index.js"></script>
   </body>
 </html>

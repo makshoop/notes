@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(198, 252, 209);
+}
+
+.table {
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    padding: 0 400px 0 400px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}

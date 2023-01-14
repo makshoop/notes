@@ -1,0 +1,15 @@
+.search-engine {
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    padding: 50px 400px 0 400px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-size: small;
+}
+
+input {
+    background-color: rgb(214, 255, 223);
+    width: 220px;
+    height: 25px;
+    border: 4px solid;
+}
