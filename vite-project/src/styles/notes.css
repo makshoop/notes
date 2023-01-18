@@ -1,3 +1,10 @@
+.notes {
+    overflow: auto;
+    overflow-x: hidden;
+    width:auto;
+    height:400px;
+}
+
 .note {
     background-color: rgb(214, 255, 223);
     font-family: 'Gloria Hallelujah', cursive;
@@ -9,3 +16,33 @@
     border: 5px solid;
     height: max-content;
 }
+
+mark {
+    color: black;
+    background: rgb(88, 214, 153);
+
+}
+
+@media(max-width: 1250px) {
+    .notes {
+        height: 700px;
+    }
+
+    .note {
+        margin: 15px 100px 0 100px;
+    }
+}
+
+@media(max-width: 750px) {
+    .notes {
+        height: 700px;
+    }
+
+    .note {
+        margin: 15px 10px 0 10px;
+    }
+}
+
+
+
+

@@ -28,4 +28,22 @@ button {
 button:hover {
     background-color: aqua;
     box-shadow: 2px 2px 1px black;
+    cursor: pointer;
 }
+
+@media(max-width: 1250px) {
+    .search-engine {
+        padding: 0 200px 0 200px;
+    }
+}
+
+@media(max-width: 750px) {
+    .search-engine {
+        padding: 10px;
+    }
+
+    .search-engine input {
+        margin-top: 7px;
+    }
+}
+

@@ -1,3 +1,4 @@
+
 body {
     background-color: rgb(198, 252, 209);
 }
@@ -9,3 +10,22 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
 }
+
+mark {
+    color: white;
+    background: blue;
+}
+
+@media(max-width: 1250px) {
+    .table {
+        padding: 0 200px 0 200px ;
+    }
+}
+
+@media(max-width: 750px) {
+    .table {
+        padding: 10px;
+    }
+}
+
+
