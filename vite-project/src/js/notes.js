@@ -18,7 +18,22 @@ export function getNotes() {
 					</div>
 				`;
 			});
+			if (notes.length === 0) {
+				document.getElementById("notes").innerHTML = `
+					<h1>
+						No Results;(
+					</h1>
+				`;
+			}
+
 			document.querySelector("#notes").innerHTML = notes.join("");
+			if (notes.length === 0) {
+				document.getElementById("notes").innerHTML = `
+					<h1>
+						No Results:(
+					</h1>
+				`;
+			}
 		});
 }
 
@@ -39,22 +54,3 @@ function getAllNotes() {
 }
 
 getAllNotes();
-// document.querySelector("#note").innerHTML = `
-// 	<h2>No results ;(</h2>`;
-
-// function throttle(callee, timeout) {
-// 	let timer = null;
-
-// 	return function perform(...args) {
-// 		if (timer) return;
-
-// 		timer = setTimeout(() => {
-// 			callee(...args);
-
-// 			clearTimeout(timer);
-// 			timer = null;
-// 		}, timeout);
-// 	};
-// }
-
-// export const throttledGetNotes = throttle(getNotes, 1000);
