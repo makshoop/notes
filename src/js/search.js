@@ -1,4 +1,4 @@
-import { getNotes } from "./notes";
+import { getNotes, getAllNotes } from "./notes";
 import { throttle } from "./utils";
 
 const inputValue = document.getElementById("input");
@@ -14,3 +14,5 @@ document.getElementById("but").addEventListener("click", () => {
 	getNotesThrottled();
 	getInputValue();
 });
+
+getAllNotes();

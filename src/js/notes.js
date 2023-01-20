@@ -30,7 +30,7 @@ export function getNotes() {
 		});
 }
 
-function getAllNotes() {
+export function getAllNotes() {
 	fetch("http://localhost:3000/notes")
 		.then((response) => response.json())
 		.then((json) => {
@@ -45,5 +45,3 @@ function getAllNotes() {
 			document.querySelector("#notes").innerHTML = notes.join("");
 		});
 }
-
-getAllNotes();
