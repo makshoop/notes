@@ -7,32 +7,25 @@ export function getNotes() {
 	fetch(`http://localhost:3000/notes?q=${inputValue}`)
 		.then((response) => response.json())
 		.then((json) => {
-			const notes = json.map((note) => {
-				const title = highlightWords(note.title, inputValue);
-				const description = highlightWords(note.description, inputValue);
-
-				return `
-					<div class="note">
-						<h2>${title}</h2>
-						<p>${description}</p>
-					</div>
-				`;
-			});
-			if (notes.length === 0) {
+			if (json.length === 0) {
 				document.getElementById("notes").innerHTML = `
 					<h1>
 						No Results;(
 					</h1>
 				`;
-			}
+			} else {
+				const notes = json.map((note) => {
+					const title = highlightWords(note.title, inputValue);
+					const description = highlightWords(note.description, inputValue);
 
-			document.querySelector("#notes").innerHTML = notes.join("");
-			if (notes.length === 0) {
-				document.getElementById("notes").innerHTML = `
-					<h1>
-						No Results:(
-					</h1>
-				`;
+					return `
+						<div class="note">
+							<h2>${title}</h2>
+							<p>${description}</p>
+						</div>
+					`;
+				});
+				document.querySelector("#notes").innerHTML = notes.join("");
 			}
 		});
 }
