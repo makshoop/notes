@@ -16,3 +16,15 @@ document.getElementById("but").addEventListener("click", () => {
 });
 
 getAllNotes();
+
+const window = document.getElementById("add-note");
+const addButton = document.getElementById("add-button");
+const closeButton = document.getElementById("close-button");
+
+addButton.onclick = () => {
+	window.style.display = "flex";
+};
+
+closeButton.onclick = () => {
+	window.style.display = "none";
+};

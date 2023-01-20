@@ -73,3 +73,11 @@ export function getAllNotes() {
 			input.setAttribute("style", "background: none;");
 		});
 }
+
+btn.onclick = () => {
+	modalView.open();
+	modalView.btnNoElement.addEventListener("mouseover", mouseOverHandler);
+};
+
+let btn = document.getElementById("btn-op");
+let count = 0;
