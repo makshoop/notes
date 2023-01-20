@@ -7,9 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "server:start": "json-server --watch db.json"
+    "server:start": "json-server --watch db.json",
+    "lint": "npx rome check ./src --apply-suggested",
+    "format": "npx rome format ./src --write"
   },
   "devDependencies": {
+    "rome": "^11.0.0",
     "vite": "^4.0.0"
   }
 }
