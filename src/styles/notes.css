@@ -24,6 +24,21 @@
     height: max-content;
 }
 
+.buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 5px 5px 0 0;
+    margin: -20px;
+}
+
+#edit-button img {
+    height: 20px;
+}
+
+#delete-button img {
+    height: 20px;
+}
+
 mark {
     color: black;
     background: rgb(88, 214, 153);

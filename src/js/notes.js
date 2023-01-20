@@ -23,7 +23,16 @@ export function getNotes() {
 					const description = highlightWords(note.description, inputValue);
 
 					return `
+					
 						<div class="note">
+							<div class="buttons">
+								<button id='delete-button'>
+									<img src="./src/assets/close.svg" alt="delete">
+								</button>
+								<button id='edit-button'>
+									<img src="/src/assets/pencil.svg" alt="edit">
+								</button>
+							</div>
 							<h2>${title}</h2>
 							<p>${description}</p>
 						</div>
@@ -47,6 +56,14 @@ export function getAllNotes() {
 			const notes = json.map((note) => {
 				return `
 					<div class="note">
+						<div class="buttons">
+							<button id='delete-button'>
+								<img src="./src/assets/close.svg" alt="delete">
+							</button>
+							<button id='edit-button'>
+								<img src="/src/assets/pencil.svg" alt="edit">
+							</button>
+						</div>
 						<h2>${note.title}</h2>
 						<p>${note.description}</p>
 					</div>
