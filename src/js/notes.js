@@ -3,6 +3,10 @@ import { highlightWords } from "./utils";
 
 export function getNotes() {
 	const inputValue = getInputValue();
+	input.setAttribute(
+		"style",
+		"background: url(./src/assets/load.gif)  no-repeat center right; background-size: 20px;",
+	);
 
 	fetch(`http://localhost:3000/notes?q=${inputValue}`)
 		.then((response) => response.json())
@@ -27,10 +31,16 @@ export function getNotes() {
 				});
 				document.querySelector("#notes").innerHTML = notes.join("");
 			}
+			input.setAttribute("style", "background: none;");
 		});
 }
 
 export function getAllNotes() {
+	input.setAttribute(
+		"style",
+		"background: url(./src/assets/load.gif)  no-repeat center right; background-size: 20px;",
+	);
+
 	fetch("http://localhost:3000/notes")
 		.then((response) => response.json())
 		.then((json) => {
@@ -43,5 +53,6 @@ export function getAllNotes() {
 				`;
 			});
 			document.querySelector("#notes").innerHTML = notes.join("");
+			input.setAttribute("style", "background: none;");
 		});
 }
