@@ -1,37 +1,37 @@
 .add-note {
-    display: none;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
-    margin: auto;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
 }
 
 .add-note-window {
+    display: flex;
+    flex-direction: column;
     background-color: rgb(198, 252, 209);
     font-family: 'Press Start 2P', cursive;
-    display: flex;
-    margin: auto;
-    width: 600px;
-    height: 480px;
-    flex-direction: column;
-    justify-content: flex-start;
+    margin: auto; 
+    padding: 20px;
     border: 5px solid;
+    width: 500px; 
+    height: 430px;
 }
 
 .add-note-window button {
     width: auto;
-    margin: 0 15px 0 15px;
 }
 
 .name-window {
     display: flex;
     justify-content: space-between;
-    padding: 30px;
+    padding-bottom: 30px;
 }
 
 #close-button {
@@ -40,31 +40,36 @@
     margin: -20px;
 }
 
-.form {
+#add-note-form {
     display: flex;
     flex-direction: column;
-    padding: 15px;
 }
 
-.form input {
+#add-note-form input {
     background-color: rgb(225, 255, 230);
     font-family: 'Gloria Hallelujah', cursive;
     border: 3px solid;
     font-size: x-large;
     font-weight: 800;
+    padding: 10px;
+    margin: 10px;
 }
 
-.form textarea {
+#add-note-form textarea {
     background-color: rgb(225, 255, 230);
     font-family: 'Gloria Hallelujah', cursive;
     font-size: large;
     font-weight: 600;
     border: 3px solid;
+    margin: 10px;
+}
+
+#add-note-form button {
+    margin: 10px;
 }
 
 
 .modal {
-    
     display: flex; 
     align-items: center;
     justify-content: center;

@@ -94,6 +94,72 @@ export function getAllNotes() {
 		});
 }
 
+export function addNote() {
+	const modal = document.createElement("div");
+	modal.classList.add("add-note");
+	modal.innerHTML = `
+	<div class="add-note-window" id="add-note-window">
+		<div class="name-window">
+			<h3>New Note</h3>
+			<button id="cancel-add-button"><img src="./src/assets/close.svg" alt="close"></button>
+		</div>
+		<form id="add-note-form">
+			<label for="note-title">Title:</label>
+			<input type="text" id="note-title">
+			<label for="note-description">Description:</label>
+			<textarea id="note-description"  cols="10" rows="4"></textarea>
+			<button id="add-btn" type="submit">Save</button>
+		</form>
+		</div>
+	</div>
+	`;
+	document.body.appendChild(modal);
+
+	const addNoteForm = document.querySelector("#add-note-form");
+	addNoteForm.addEventListener("submit", (event) => {
+		event.preventDefault();
+
+		const newTitle = document.querySelector("#note-title").value;
+		const newDescription = document.querySelector("#note-description").value;
+
+		fetch("http://localhost:3000/notes", {
+			method: "POST",
+			body: JSON.stringify({
+				title: newTitle,
+				description: newDescription,
+			}),
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
+			.then((response) => response.json())
+			.then((note) => {
+				const notesContainer = document.querySelector("#notes");
+				notesContainer.innerHTML += `
+			<div class="note" data-note-id="${note.id}">
+			<div class="buttons">
+				<button class='delete-button' id="delete-button${note.id}">
+				<img src="./src/assets/delete.svg" alt="delete">
+				</button>
+				<button id='edit-button'>
+				<img src="/src/assets/pencil.svg" alt="edit">
+				</button>
+			</div>
+			<h2>${note.title}</h2>
+			<p>${note.description}</p>
+			</div>
+		`;
+				modal.remove();
+			});
+	});
+
+	const cancelAddButton = document.querySelector("#cancel-add-button");
+	cancelAddButton.addEventListener("click", (event) => {
+		event.preventDefault();
+		modal.remove();
+	});
+}
+
 function deleteNote() {
 	const noteId = this.parentNode.parentNode.getAttribute("data-note-id");
 
