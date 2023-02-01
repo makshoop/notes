@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <title>Notes</title>
+  </head>
+  <body>
+
+    <div class="table" id="table">
+      <h1>Hello, my dear friend!</h1>
+      <p>Use this service to write and edit notes</p>
+      <p>Good luck ;) <button id="add-button">Add Note...</button></p>
+    </div>
+
+    <div class="search-engine" id="search-engine">
+      <form onsubmit="return false">enter a request
+        <input id='input' type="text">
+        <button id="but">CLICK!</button>
+      </form>
+    </div>
+
+    <div class="notes" id="notes"></div>
+    <img src="./assets/close.svg" alt="">
+
+    <script type="module" src="./src/index.js"></script>
+  </body>
+</html>

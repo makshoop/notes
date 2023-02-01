@@ -1,0 +1,49 @@
+.search-engine {
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    padding: 50px 400px 0 400px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-size: small;
+}
+
+.search-engine input {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-weight: 800;
+    font-size: x-large;
+    background-color: rgb(214, 255, 223);
+    width: 220px;
+    height: 25px;
+    border: 4px solid;
+    border-radius: 0;
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;
+    background-color: rgb(214, 255, 223);
+    padding: 8px;
+    border: 3px solid;
+}
+
+button:hover {
+    background-color: aqua;
+    box-shadow: 2px 2px 1px black;
+    cursor: pointer;
+}
+
+@media(max-width: 1250px) {
+    .search-engine {
+        padding: 0 200px 0 200px;
+    }
+}
+
+@media(max-width: 750px) {
+    .search-engine {
+        padding: 10px;
+    }
+
+    .search-engine input {
+        margin-top: 7px;
+    }
+}
+

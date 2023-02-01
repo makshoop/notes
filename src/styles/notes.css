@@ -1,0 +1,77 @@
+.notes {
+    overflow: auto;
+    overflow-x: hidden;
+    width:auto;
+    height:400px;
+}
+
+.notes h1 {
+    font-family: 'Gloria Hallelujah', cursive;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 70px;
+}
+
+.note {
+    background-color: rgb(214, 255, 223);
+    font-family: 'Gloria Hallelujah', cursive;
+    display: flex;
+    padding: 0 0 0 10px;
+    margin: 30px 400px 0 400px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 5px solid;
+    height: max-content;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 5px 5px 0 0;
+    margin: -20px;
+}
+
+
+#edit-button img {
+    height: 20px;
+}
+
+.delete-button img {
+    height: 20px;
+}
+
+
+
+mark {
+    color: black;
+    background: rgb(88, 214, 153);
+
+}
+
+@media(max-width: 1250px) {
+    .notes {
+        height: 700px;
+    }
+
+    .note {
+        margin: 15px 100px 0 100px;
+    }
+}
+
+@media(max-width: 750px) {
+    .notes {
+        height: 700px;
+    }
+
+    .notes h1 {
+        font-size: 35px;
+    }
+
+    .note {
+        margin: 15px 10px 0 10px;
+    }
+}
+
+
+
+
